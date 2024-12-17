@@ -1,0 +1,13 @@
+version: 0.0
+os: linux
+files:
+  - source: /     # Source path in the repository
+    destination: /home/ec2-user/$APP_NAME    # Destination path on the EC2 instance
+
+hooks:
+  total:
+    - location: /deploy.sh
+      timeout: 180
+      runas: root
+  
+
